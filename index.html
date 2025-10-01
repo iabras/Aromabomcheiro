@@ -131,7 +131,9 @@
         .btn-tertiary:hover { background-color: var(--primary-blue); color: white; }
 
 
-        /* CABEÇALHO (HEADER) - Estilo Sleek */
+        /* ======================================= */
+        /* CABEÇALHO (HEADER) - ESTILO RESPONSIVO */
+        /* ======================================= */
         header {
             background-color: var(--dark-interior);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -140,7 +142,14 @@
             z-index: 1000;
         }
 
-        header .container { padding: 18px 0; }
+        /* Estrutura flexível para logo e toggle em mobile */
+        .header-content { 
+            display: flex;
+            justify-content: space-between; /* Espaço entre logo e botão */
+            align-items: center;
+            padding: 15px 0; /* Padding um pouco menor para mobile */
+            position: relative; /* Importante para o posicionamento do menu */
+        }
 
         /* ESTILO DO LOGO */
         .logo { 
@@ -166,9 +175,67 @@
             to { transform: rotate(360deg); }
         }
 
-        nav ul a { color: #ccc; text-decoration: none; font-weight: 500; }
+        /* Botão do Menu Hambúrguer (Mobile) */
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: var(--accent-green);
+            font-size: 1.8em;
+            cursor: pointer;
+            display: block; /* Visível por padrão em mobile */
+            padding: 5px;
+            z-index: 1001; /* Fica acima do menu */
+        }
+
+        /* NAVEGAÇÃO MOBILE (OCULTA POR PADRÃO) */
+        nav {
+            display: none; /* Oculta o menu por padrão em mobile */
+            width: 100%;
+            position: absolute;
+            top: 60px; /* Alinha abaixo do header (ajustar se o padding do header mudar) */
+            left: 0;
+            background-color: var(--dark-interior); /* Fundo escuro para o menu */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            padding-bottom: 10px;
+        }
+
+        /* Classe para mostrar o menu quando ativo (controlado pelo JS) */
+        nav.is-open {
+            display: block; 
+        }
+
+        /* Estilo da lista de links em mobile (empilhada) */
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            text-align: center;
+            padding: 10px 0;
+            border-top: 1px solid #3c4e61; /* Separador sutil */
+        }
+
+        nav ul a { 
+            color: #ccc; 
+            text-decoration: none; 
+            font-weight: 500;
+            display: block;
+            padding: 5px 0; /* Aumenta a área de clique */
+        }
         nav ul a:hover { color: var(--accent-green); }
-        .cta-nav { background-color: var(--accent-green) !important; color: var(--dark-interior) !important; padding: 8px 15px !important; border-radius: 5px !important; }
+
+        /* Estilo especial para o CTA no menu mobile */
+        .cta-nav {
+            display: block;
+            margin: 10px auto;
+            width: 80%;
+            padding: 10px 15px !important; 
+            background-color: var(--accent-green) !important; 
+            color: var(--dark-interior) !important;
+            border-radius: 5px !important;
+        }
+
 
         /* SEÇÃO HERO (HOME) */
         .hero {
@@ -366,10 +433,45 @@
         /* MEDIA QUERY: DESKTOP/TABLET (RESPONSIVIDADE) */
         /* ======================================= */
         @media (min-width: 768px) {
-
+            
             /* NAVEGAÇÃO DESKTOP */
-            nav ul { display: flex; gap: 25px; }
-            nav .cta-nav { display: inline-block; }
+            .header-content { 
+                display: flex;
+                justify-content: space-between; 
+                align-items: center;
+                padding: 18px 0;
+            }
+            
+            .menu-toggle {
+                display: none; /* Oculta o botão hambúrguer no desktop */
+            }
+
+            nav { 
+                display: block !important; /* Força a exibição no desktop */
+                position: static; /* Volta para o fluxo normal */
+                width: auto;
+                box-shadow: none;
+                padding-bottom: 0;
+            }
+            
+            nav ul { 
+                display: flex; 
+                gap: 25px; 
+                align-items: center;
+            }
+            
+            nav ul li {
+                border-top: none; 
+                padding: 0;
+            }
+            
+            .cta-nav {
+                /* Reverte o estilo do CTA para o original */
+                display: inline-block !important;
+                width: auto !important;
+                margin: 0 !important;
+                padding: 8px 15px !important;
+            }
 
             /* HERO */
             .hero { text-align: left; }
@@ -389,6 +491,7 @@
             .sustentabilidade-grid { grid-template-columns: repeat(4, 1fr); }
             
             /* CONTATO */
+            /* Mantido o layout em coluna no container flex para centralizar */
             .contato-flex {
                 flex-direction: column; 
                 justify-content: center;
@@ -397,16 +500,20 @@
             }
         }
     </style>
-    </head>
+</head>
 <body>
 
     <header>
-        <div class="container">
+        <div class="container header-content">
             <div class="logo">
                 <i class="fas fa-fan logo-icon"></i> 
                 <span>AROMAS</span> <span class="logo-accent">BOM CHEIRO</span>
             </div>
-            <nav>
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="main-nav">
                 <ul>
                     <li><a href="#home" aria-label="Voltar para a seção principal/Home">Home</a></li>
                     <li><a href="#beneficios" aria-label="Ir para a seção de benefícios">Benefícios</a></li>
@@ -644,6 +751,45 @@
             // Adiciona o listener de evento para scroll e também executa uma vez no carregamento
             window.addEventListener('scroll', checkVisibility);
             checkVisibility(); // Executa ao carregar para mostrar as seções já visíveis.
+            
+            
+            /* CÓDIGO PARA O MENU RESPONSIVO */
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            const navLinks = mainNav.querySelectorAll('a');
+
+            // 1. Função para abrir/fechar o menu ao clicar no botão
+            menuToggle.addEventListener('click', function() {
+                // Alterna a classe 'is-open' no elemento nav
+                mainNav.classList.toggle('is-open');
+                
+                // Altera o ícone do botão (Hambúrguer <-> X)
+                const icon = menuToggle.querySelector('i');
+                if (mainNav.classList.contains('is-open')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                    menuToggle.setAttribute('aria-expanded', 'true');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // 2. Fechar o menu ao clicar em um link (âncora) no mobile
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Verifica se o menu está aberto para fechar
+                    if (mainNav.classList.contains('is-open')) {
+                        mainNav.classList.remove('is-open');
+                        // Garante que o ícone volte para o hambúrguer
+                        menuToggle.querySelector('i').classList.remove('fa-times');
+                        menuToggle.querySelector('i').classList.add('fa-bars');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+            /* FIM DO CÓDIGO DO MENU RESPONSIVO */
         });
     </script>
 </body>

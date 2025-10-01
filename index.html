@@ -78,13 +78,13 @@
             padding: 80px 0;
         }
         
-        /* H1 e H2 ATUALIZADOS */
+        /* H1 e H2 ATUALIZADOS - TAMANHOS REDUZIDOS AQUI */
         h1 {
             font-weight: 700;
             margin-bottom: 25px;
             color: var(--dark-interior);
             letter-spacing: -0.5px;
-            font-size: 3em;
+            font-size: 2.5em; /* REDUZIDO de 3em para 2.5em */
         }
 
         h2 {
@@ -93,7 +93,7 @@
             /* COR DO H2 ATUALIZADA */
             color: #00b894; 
             letter-spacing: -0.5px;
-            font-size: 2.5em; 
+            font-size: 2em; /* REDUZIDO de 2.5em para 2em */
             text-align: center;
         }
 
@@ -434,6 +434,9 @@
         /* ======================================= */
         @media (min-width: 768px) {
             
+            /* H1 desktop */
+            .hero h1 { font-size: 3.5em; } /* REDUZIDO de 4em para 3.5em */
+            
             /* NAVEGAÇÃO DESKTOP */
             .header-content { 
                 display: flex;
@@ -476,7 +479,6 @@
             /* HERO */
             .hero { text-align: left; }
             .hero .container { align-items: flex-start; }
-            .hero h1 { font-size: 4em; }
 
             /* GRADES */
             .beneficios-grid { grid-template-columns: repeat(4, 1fr); }
@@ -491,7 +493,6 @@
             .sustentabilidade-grid { grid-template-columns: repeat(4, 1fr); }
             
             /* CONTATO */
-            /* Mantido o layout em coluna no container flex para centralizar */
             .contato-flex {
                 flex-direction: column; 
                 justify-content: center;

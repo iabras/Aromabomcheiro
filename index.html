@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>AROMAS BOM CHEIRO | Essências Premium para Carros | Luxo e Sustentabilidade</title>
-    
+
     <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png">
-    
+
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    
+
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    
-    <meta name="description" content="AROMAS BOM CHEIRO: Mais do que um cheiro bom, oferecemos uma experiência olfativa premium que redefine sua viagem. Conforto, luxo e sustentabilidade para o seu carro.">
-    
-    <meta name="keywords" content="AROMAS BOM CHEIRO, Aromatizantes para Carros, Essências Automotivas, Óleos Essenciais Carro, Aromatizante Sustentável, Fragrância Premium Carro, Luxo Automotivo">
-    
+
+    <meta name="description"
+        content="AROMAS BOM CHEIRO: Mais do que um cheiro bom, oferecemos uma experiência olfativa premium que redefine sua viagem. Conforto, luxo e sustentabilidade para o seu carro.">
+
+    <meta name="keywords"
+        content="AROMAS BOM CHEIRO, Aromatizantes para Carros, Essências Automotivas, Óleos Essenciais Carro, Aromatizante Sustentável, Fragrância Premium Carro, Luxo Automotivo">
+
     <link rel="canonical" href="https://aromasbomcheiro.online/">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <style>
         /* RESET BÁSICO */
         * {
@@ -29,13 +32,13 @@
             padding: 0;
             box-sizing: border-box;
             /* Esta transição geral é boa, mas vamos adicionar o scroll-behavior ao HTML */
-            transition: all 0.3s ease-in-out; 
+            transition: all 0.3s ease-in-out;
         }
 
         /* 1. EFEITO DE TRANSIÇÃO DE PÁGINA: SCROLL SUAVE */
         /* Aplica rolagem suave ao clicar nos links de âncora */
         html {
-            scroll-behavior: smooth; 
+            scroll-behavior: smooth;
         }
 
         body {
@@ -47,9 +50,9 @@
 
         /* VARIÁVEIS DE CORES */
         :root {
-            --primary-blue: #0077b6; 
-            --dark-interior: #1c2833; 
-            --accent-green: #65d6ad; 
+            --primary-blue: #0077b6;
+            --dark-interior: #1c2833;
+            --accent-green: #65d6ad;
             --text-color: #333;
             --bg-light: #f4f7f9;
         }
@@ -61,16 +64,20 @@
             transform: translateY(20px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
+
         /* Estado final da animação (quando visível) */
         .fade-in.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
+
         /* Garantir que o HERO não tenha o fade-in e apareça imediatamente */
         .hero {
-             opacity: 1; /* Sobrescreve a opacidade inicial */
-             transform: translateY(0);
+            opacity: 1;
+            /* Sobrescreve a opacidade inicial */
+            transform: translateY(0);
         }
+
         /* Fim da Animação Fade-In */
 
 
@@ -84,32 +91,39 @@
         .section-padding {
             padding: 80px 0;
         }
-        
+
         /* H1 e H2 ATUALIZADOS - TAMANHOS REDUZIDOS AQUI */
         h1 {
             font-weight: 700;
             margin-bottom: 25px;
             color: var(--dark-interior);
             letter-spacing: -0.5px;
-            font-size: 2.5em; /* REDUZIDO de 3em para 2.5em */
+            font-size: 2.5em;
+            /* REDUZIDO de 3em para 2.5em */
         }
 
         h2 {
             font-weight: 700;
             margin-bottom: 25px;
             /* COR DO H2 ATUALIZADA */
-            color: #00b894; 
+            color: #00b894;
             letter-spacing: -0.5px;
-            font-size: 2em; /* REDUZIDO de 2.5em para 2em */
+            font-size: 2em;
+            /* REDUZIDO de 2.5em para 2em */
             text-align: center;
         }
 
-        h3 { color: var(--primary-blue); margin-bottom: 12px; font-weight: 600; font-size: 1.3em;}
+        h3 {
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            font-weight: 600;
+            font-size: 1.3em;
+        }
 
-        .subtitle { 
-            text-align: center; 
-            margin-bottom: 50px; 
-            color: #666; 
+        .subtitle {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #666;
             font-size: 1.2em;
             max-width: 800px;
             margin-left: auto;
@@ -117,7 +131,9 @@
         }
 
         /* BOTÕES (CTAs) */
-        .btn-primary, .btn-secondary, .btn-tertiary {
+        .btn-primary,
+        .btn-secondary,
+        .btn-tertiary {
             display: inline-block;
             padding: 14px 30px;
             border-radius: 8px;
@@ -128,14 +144,41 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .btn-primary { background-color: var(--primary-blue); color: white; border: none; }
-        .btn-primary:hover { background-color: #005f9c; transform: translateY(-3px); box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); }
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+        }
 
-        .btn-secondary { background-color: var(--accent-green); color: var(--dark-interior); border: none; }
-        .btn-secondary:hover { background-color: #4ed39e; transform: translateY(-3px); box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); }
+        .btn-primary:hover {
+            background-color: #005f9c;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
 
-        .btn-tertiary { background: none; color: var(--primary-blue); border: 2px solid var(--primary-blue); box-shadow: none; }
-        .btn-tertiary:hover { background-color: var(--primary-blue); color: white; }
+        .btn-secondary {
+            background-color: var(--accent-green);
+            color: var(--dark-interior);
+            border: none;
+        }
+
+        .btn-secondary:hover {
+            background-color: #4ed39e;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-tertiary {
+            background: none;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+            box-shadow: none;
+        }
+
+        .btn-tertiary:hover {
+            background-color: var(--primary-blue);
+            color: white;
+        }
 
 
         /* ======================================= */
@@ -150,36 +193,46 @@
         }
 
         /* Estrutura flexível para logo e toggle em mobile */
-        .header-content { 
+        .header-content {
             display: flex;
-            justify-content: space-between; /* Espaço entre logo e botão */
+            justify-content: space-between;
+            /* Espaço entre logo e botão */
             align-items: center;
-            padding: 15px 0; /* Padding um pouco menor para mobile */
-            position: relative; /* Importante para o posicionamento do menu */
+            padding: 15px 0;
+            /* Padding um pouco menor para mobile */
+            position: relative;
+            /* Importante para o posicionamento do menu */
         }
 
         /* ESTILO DO LOGO */
-        .logo { 
-            color: white; 
-            font-size: 1.6em; 
-            font-weight: 700; 
+        .logo {
+            color: white;
+            font-size: 1.6em;
+            font-weight: 700;
             display: flex;
             align-items: center;
             letter-spacing: 1px;
         }
+
         .logo-icon {
-            color: var(--accent-green); 
+            color: var(--accent-green);
             font-size: 1.2em;
             margin-right: 8px;
-            animation: spin 6s linear infinite; 
+            animation: spin 6s linear infinite;
         }
+
         .logo-accent {
-            color: var(--accent-green); 
+            color: var(--accent-green);
         }
-        
+
         @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* Botão do Menu Hambúrguer (Mobile) */
@@ -189,26 +242,31 @@
             color: var(--accent-green);
             font-size: 1.8em;
             cursor: pointer;
-            display: block; /* Visível por padrão em mobile */
+            display: block;
+            /* Visível por padrão em mobile */
             padding: 5px;
-            z-index: 1001; /* Fica acima do menu */
+            z-index: 1001;
+            /* Fica acima do menu */
         }
 
         /* NAVEGAÇÃO MOBILE (OCULTA POR PADRÃO) */
         nav {
-            display: none; /* Oculta o menu por padrão em mobile */
+            display: none;
+            /* Oculta o menu por padrão em mobile */
             width: 100%;
             position: absolute;
-            top: 60px; /* Alinha abaixo do header (ajustar se o padding do header mudar) */
+            top: 60px;
+            /* Alinha abaixo do header (ajustar se o padding do header mudar) */
             left: 0;
-            background-color: var(--dark-interior); /* Fundo escuro para o menu */
+            background-color: var(--dark-interior);
+            /* Fundo escuro para o menu */
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
             padding-bottom: 10px;
         }
 
         /* Classe para mostrar o menu quando ativo (controlado pelo JS) */
         nav.is-open {
-            display: block; 
+            display: block;
         }
 
         /* Estilo da lista de links em mobile (empilhada) */
@@ -220,25 +278,30 @@
         nav ul li {
             text-align: center;
             padding: 10px 0;
-            border-top: 1px solid #3c4e61; /* Separador sutil */
+            border-top: 1px solid #3c4e61;
+            /* Separador sutil */
         }
 
-        nav ul a { 
-            color: #ccc; 
-            text-decoration: none; 
+        nav ul a {
+            color: #ccc;
+            text-decoration: none;
             font-weight: 500;
             display: block;
-            padding: 5px 0; /* Aumenta a área de clique */
+            padding: 5px 0;
+            /* Aumenta a área de clique */
         }
-        nav ul a:hover { color: var(--accent-green); }
+
+        nav ul a:hover {
+            color: var(--accent-green);
+        }
 
         /* Estilo especial para o CTA no menu mobile */
         .cta-nav {
             display: block;
             margin: 10px auto;
             width: 80%;
-            padding: 10px 15px !important; 
-            background-color: var(--accent-green) !important; 
+            padding: 10px 15px !important;
+            background-color: var(--accent-green) !important;
             color: var(--dark-interior) !important;
             border-radius: 5px !important;
         }
@@ -254,24 +317,31 @@
             text-align: center;
         }
 
-        .hero h1 { color:#65d6ad ; }
-        .hero p { 
-            font-size: 1.3em; 
-            margin-bottom: 40px; 
+        .hero h1 {
+            color: #65d6ad;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
             max-width: 700px;
             font-weight: 300;
         }
 
         /* GRADES & CARDS */
-        .beneficios-grid, .produtos-tipo-grid, .tendencias-grid {
+        .beneficios-grid,
+        .produtos-tipo-grid,
+        .tendencias-grid {
             display: grid;
-            grid-template-columns: 1fr; 
+            grid-template-columns: 1fr;
             gap: 30px;
             margin-top: 30px;
             text-align: center;
         }
 
-        .beneficio-item, .produto-card, .sustentabilidade-item {
+        .beneficio-item,
+        .produto-card,
+        .sustentabilidade-item {
             background: white;
             padding: 30px;
             border-radius: 12px;
@@ -279,6 +349,7 @@
             border: 1px solid #f0f0f0;
             height: 100%;
         }
+
         .produto-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
@@ -291,6 +362,7 @@
             padding-left: 0;
             text-align: left;
         }
+
         .guia-passos li {
             position: relative;
             margin-bottom: 25px;
@@ -298,6 +370,7 @@
             font-size: 1.1em;
             line-height: 1.4;
         }
+
         .guia-passos li::before {
             counter-increment: guia-counter;
             content: counter(guia-counter);
@@ -316,18 +389,24 @@
         }
 
         /* SEÇÃO SUSTENTABILIDADE */
-        .bg-light { background-color: var(--bg-light); }
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+
         .sustentabilidade-grid {
             margin-top: 40px;
             display: grid;
             grid-template-columns: 1fr;
             gap: 20px;
         }
-        .sustentabilidade-item h3 { color: var(--accent-green); }
+
+        .sustentabilidade-item h3 {
+            color: var(--accent-green);
+        }
 
         /* SEÇÃO INOVAÇÕES */
         .tendencias-grid .produto-card {
-             border-left: 4px solid var(--accent-green);
+            border-left: 4px solid var(--accent-green);
         }
 
         .onde-comprar-list {
@@ -337,14 +416,16 @@
             margin: 20px auto;
             max-width: 600px;
         }
+
         .onde-comprar-list li {
             padding: 10px 0;
             border-bottom: 1px dashed #ddd;
             display: flex;
             align-items: center;
         }
+
         .onde-comprar-list li:before {
-            content: "\f058"; 
+            content: "\f058";
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
             color: var(--primary-blue);
@@ -354,16 +435,17 @@
 
         /* SEÇÃO CONTATO (Estilo customizado e escuro) */
         .bg-dark-contact {
-            background-color: var(--dark-interior); 
+            background-color: var(--dark-interior);
             color: white;
         }
 
         .bg-dark-contact h2 {
-            color: var(--accent-green); /* Título em destaque */
+            color: var(--accent-green);
+            /* Título em destaque */
         }
-        
+
         .bg-dark-contact .subtitle {
-             color: #ccc; 
+            color: #ccc;
         }
 
         .contato-flex {
@@ -371,27 +453,31 @@
             flex-direction: column;
             gap: 40px;
             align-items: center;
-            text-align: center; 
+            text-align: center;
         }
-        
+
         /* Estilo para o bloco de informação */
         .contato-info-grande {
             width: 100%;
             max-width: 600px;
             padding: 40px;
-            background: #2c3e50; /* Um tom um pouco mais claro que o fundo */
+            background: #2c3e50;
+            /* Um tom um pouco mais claro que o fundo */
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            /* Sombra mais intensa */
             margin-top: 20px;
-            border-top: 5px solid var(--accent-green); /* Destaque superior */
+            border-top: 5px solid var(--accent-green);
+            /* Destaque superior */
         }
 
         .contato-info-grande h3 {
             font-size: 1.5em;
             margin-bottom: 20px;
-            color: var(--accent-green); /* Títulos menores em destaque */
+            color: var(--accent-green);
+            /* Títulos menores em destaque */
         }
-        
+
         .contato-info-grande p {
             font-size: 1.1em;
             margin-bottom: 15px;
@@ -407,18 +493,20 @@
             color: var(--accent-green);
             text-decoration: underline;
         }
+
         .contato-info-grande a:hover {
             color: white;
         }
-        
+
         .redes-sociais a {
-            color: white; /* Cor do link nas redes sociais */
+            color: white;
+            /* Cor do link nas redes sociais */
             font-weight: 600;
             margin: 0 10px;
             display: inline-block;
             padding: 5px 0;
         }
-        
+
         .contato-info-grande i {
             margin-right: 8px;
             color: var(--accent-green);
@@ -440,41 +528,48 @@
         /* MEDIA QUERY: DESKTOP/TABLET (RESPONSIVIDADE) */
         /* ======================================= */
         @media (min-width: 768px) {
-            
+
             /* H1 desktop */
-            .hero h1 { font-size: 3.5em; } /* REDUZIDO de 4em para 3.5em */
-            
+            .hero h1 {
+                font-size: 3.5em;
+            }
+
+            /* REDUZIDO de 4em para 3.5em */
+
             /* NAVEGAÇÃO DESKTOP */
-            .header-content { 
+            .header-content {
                 display: flex;
-                justify-content: space-between; 
+                justify-content: space-between;
                 align-items: center;
                 padding: 18px 0;
             }
-            
+
             .menu-toggle {
-                display: none; /* Oculta o botão hambúrguer no desktop */
+                display: none;
+                /* Oculta o botão hambúrguer no desktop */
             }
 
-            nav { 
-                display: block !important; /* Força a exibição no desktop */
-                position: static; /* Volta para o fluxo normal */
+            nav {
+                display: block !important;
+                /* Força a exibição no desktop */
+                position: static;
+                /* Volta para o fluxo normal */
                 width: auto;
                 box-shadow: none;
                 padding-bottom: 0;
             }
-            
-            nav ul { 
-                display: flex; 
-                gap: 25px; 
+
+            nav ul {
+                display: flex;
+                gap: 25px;
                 align-items: center;
             }
-            
+
             nav ul li {
-                border-top: none; 
+                border-top: none;
                 padding: 0;
             }
-            
+
             .cta-nav {
                 /* Reverte o estilo do CTA para o original */
                 display: inline-block !important;
@@ -484,24 +579,47 @@
             }
 
             /* HERO */
-            .hero { text-align: left; }
-            .hero .container { align-items: flex-start; }
+            .hero {
+                text-align: left;
+            }
+
+            .hero .container {
+                align-items: flex-start;
+            }
 
             /* GRADES */
-            .beneficios-grid { grid-template-columns: repeat(4, 1fr); }
-            .produtos-tipo-grid { grid-template-columns: repeat(3, 1fr); }
-            .tendencias-grid { grid-template-columns: repeat(3, 1fr); }
+            .beneficios-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .produtos-tipo-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .tendencias-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
 
             /* GUIA */
-            .guia-flex { display: flex; justify-content: space-between; gap: 40px; text-align: left; }
-            .guia-section { width: 50%; }
+            .guia-flex {
+                display: flex;
+                justify-content: space-between;
+                gap: 40px;
+                text-align: left;
+            }
+
+            .guia-section {
+                width: 50%;
+            }
 
             /* SUSTENTABILIDADE */
-            .sustentabilidade-grid { grid-template-columns: repeat(4, 1fr); }
-            
+            .sustentabilidade-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
             /* CONTATO */
             .contato-flex {
-                flex-direction: column; 
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
@@ -509,18 +627,20 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
         <div class="container header-content">
             <div class="logo">
-                <i class="fas fa-fan logo-icon"></i> 
+                <i class="fas fa-fan logo-icon"></i>
                 <span>AROMAS</span> <span class="logo-accent">BOM CHEIRO</span>
             </div>
-            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu de navegação">
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav"
+                aria-label="Abrir menu de navegação">
                 <i class="fas fa-bars"></i>
             </button>
-            
+
             <nav id="main-nav">
                 <ul>
                     <li><a href="#home" aria-label="Voltar para a seção principal/Home">Home</a></li>
@@ -529,7 +649,8 @@
                     <li><a href="#guia" aria-label="Ir para o guia de escolha e manutenção">Guia</a></li>
                     <li><a href="#sustentabilidade" aria-label="Ir para a seção de sustentabilidade">Eco</a></li>
                     <li><a href="#inovacoes" aria-label="Ir para a seção de tendências e inovações">Tendências</a></li>
-                    <li><a href="#contato" class="cta-nav" aria-label="Ir para o formulário de contato e compra">Compre Agora</a></li>
+                    <li><a href="#contato" class="cta-nav" aria-label="Ir para o formulário de contato e compra">Compre
+                            Agora</a></li>
                 </ul>
             </nav>
         </div>
@@ -538,7 +659,9 @@
     <section id="home" class="hero">
         <div class="container">
             <h1>AROMAS BOM CHEIRO: Mantenha seu Veículo Fresco e Agradável</h1>
-            <p>Mais do que um cheiro bom, oferecemos uma **experiência olfativa** que redefine sua viagem. Descubra a linha premium de essências que trazem conforto, **luxo** e a pureza da natureza para o interior do seu carro.</p>
+            <p>Mais do que um cheiro bom, oferecemos uma <b>experiência olfativa</b> que redefine sua viagem. Descubra a
+                linha premium de essências que trazem conforto, <b>luxo</b> e a pureza da natureza para o interior do
+                seu carro.</p>
             <a href="#produtos" class="btn-primary">Descubra Nossas Essências</a>
         </div>
     </section>
@@ -566,26 +689,31 @@
             </div>
         </div>
     </section>
-    
+
     <section id="produtos" class="section-padding bg-light fade-in">
         <div class="container">
             <h2>Tipos de Aromatizantes: Fragrâncias e Óleos Essenciais</h2>
-            <p class="subtitle">Entenda a diferença entre nossas opções e escolha a que melhor se adapta ao seu estilo de vida e necessidades.</p>
-            
+            <p class="subtitle">Entenda a diferença entre nossas opções e escolha a que melhor se adapta ao seu estilo
+                de vida e necessidades.</p>
+
             <div class="produtos-tipo-grid">
                 <div class="produto-card">
                     <h3>1. Fragrâncias Sintéticas</h3>
-                    <p>Estas são as aromatizantes mais comuns e acessíveis, **criadas em laboratório para imitar cheiros naturais**. Oferecem uma ampla variedade de opções, desde floral até cítrico.</p>
+                    <p>Estas são as aromatizantes mais comuns e acessíveis, criadas em laboratório para imitar cheiros
+                        <b>naturais.</b>. Oferecem uma ampla variedade de opções, desde floral até cítrico.
+                    </p>
                     <a href="#" class="btn-secondary">Ver Coleção</a>
                 </div>
                 <div class="produto-card">
                     <h3>2. Óleos Essenciais</h3>
-                    <p>Estes são aromatizantes **100% naturais**, extraídos de plantas e flores. Eles oferecem benefícios aromáticos e até mesmo terapêuticos, como **relaxamento e melhora do humor**.</p>
+                    <p>Estes são aromatizantes <b>100% naturais,</b> extraídos de plantas e flores. Eles oferecem
+                        benefícios aromáticos e até mesmo terapêuticos, como <b>relaxamento e melhora do humor</b></p>
                     <a href="#" class="btn-secondary">Ver Coleção</a>
                 </div>
                 <div class="produto-card">
                     <h3>3. Combinações Únicas</h3>
-                    <p>Alguns fabricantes criam aromatizantes com uma **mistura de fragrâncias sintéticas e óleos essenciais**, oferecendo uma experiência olfativa exclusiva e equilibrada.</p>
+                    <p>Alguns fabricantes criam aromatizantes com uma <b>mistura de fragrâncias sintéticas e óleos
+                            essenciais,</b> oferecendo uma experiência olfativa exclusiva e equilibrada.</p>
                     <a href="#" class="btn-secondary">Ver Coleção</a>
                 </div>
             </div>
@@ -596,22 +724,26 @@
         <div class="container">
             <h2>Guia Completo: Como Escolher e Manter o Aromatizante Ideal</h2>
             <p class="subtitle">Siga nossas dicas para maximizar a experiência aromática no seu veículo.</p>
-            
+
             <div class="guia-flex">
                 <div class="guia-section">
                     <h3>Como Escolher o Ideal para Você</h3>
                     <ul class="guia-passos">
                         <li>
-                            **Considere seu Estilo de Vida:** Prefere algo suave e confortante ou algo mais estimulante e enérgico?
+                            <b>Considere seu Estilo de Vida:</b> Prefere algo suave e confortante ou algo mais
+                            estimulante e enérgico?
                         </li>
                         <li>
-                            **Verifique a Duração:** Atente-se a quanto tempo a fragrância permanece ativa no seu carro.
+                            <b>Verifique a Duração:</b> Atente-se a quanto tempo a fragrância permanece ativa no seu
+                            carro.
                         </li>
                         <li>
-                            **Leve em Conta o Formato:** Escolha o que melhor se adapta ao seu veículo (penduradores, clipes, sprays).
+                            <b>Leve em Conta o Formato:</b> Escolha o que melhor se adapta ao seu veículo (penduradores,
+                            clipes, sprays).
                         </li>
                         <li>
-                            **Considere a Sustentabilidade:** Opte por produtos eco-friendly com ingredientes naturais e embalagens recicláveis.
+                            <b>Considere a Sustentabilidade:</b> Opte por produtos eco-friendly com ingredientes
+                            naturais e embalagens recicláveis.
                         </li>
                     </ul>
                 </div>
@@ -620,13 +752,16 @@
                     <h3>Dicas de Aplicação e Manutenção</h3>
                     <ul class="guia-passos">
                         <li>
-                            **Posicionamento:** Coloque-o em um local de fácil circulação do ar (painel ou console) para dispersão uniforme.
+                            <b>Posicionamento:</b>* Coloque-o em um local de fácil circulação do ar (painel ou console)
+                            para dispersão uniforme.
                         </li>
                         <li>
-                            **Renovação:** Troque ou reabasteça regularmente, conforme as instruções, para manter o aroma fresco e duradouro.
+                            <b>Renovação:</b> Troque ou reabasteça regularmente, conforme as instruções, para manter o
+                            aroma fresco e duradouro.
                         </li>
                         <li>
-                            **Limpeza:** Limpe periodicamente a área onde o aromatizante é colocado para evitar que poeira afete a dispersão.
+                            <b>Limpeza:</b> Limpe periodicamente a área onde o aromatizante é colocado para evitar que
+                            poeira afete a dispersão.
                         </li>
                     </ul>
                 </div>
@@ -638,11 +773,12 @@
         <div class="container">
             <h2>Aromas Ecológicos: O Futuro Sustentável do seu Carro</h2>
             <p class="subtitle">Nosso compromisso com o planeta vai além da essência.</p>
-            
+
             <div class="sustentabilidade-grid">
                 <div class="sustentabilidade-item">
                     <h3><i class="fas fa-leaf"></i> Ingredientes Naturais</h3>
-                    <p>Aromatizantes com óleos essenciais e extratos vegetais, livres de químicos sintéticos agressivos.</p>
+                    <p>Aromatizantes com óleos essenciais e extratos vegetais, livres de químicos sintéticos agressivos.
+                    </p>
                 </div>
                 <div class="sustentabilidade-item">
                     <h3><i class="fas fa-recycle"></i> Embalagens Sustentáveis</h3>
@@ -654,7 +790,8 @@
                 </div>
                 <div class="sustentabilidade-item">
                     <h3><i class="fas fa-certificate"></i> Certificações Verdes</h3>
-                    <p>Selos como Ecocert e USDA Organic garantem a autenticidade e a qualidade ecológica de nossos produtos.</p>
+                    <p>Selos como Ecocert e USDA Organic garantem a autenticidade e a qualidade ecológica de nossos
+                        produtos.</p>
                 </div>
             </div>
         </div>
@@ -664,29 +801,37 @@
         <div class="container">
             <h2>Tendências de Mercado e Onde Encontrar AROMAS BOM CHEIRO</h2>
             <p class="subtitle">Fique por dentro das novidades e saiba como adquirir com segurança.</p>
-            
+
             <h3 style="text-align: center; margin-bottom: 30px;">Inovações Tecnológicas</h3>
             <div class="tendencias-grid">
                 <div class="produto-card">
                     <h3>Aromatizantes Inteligentes</h3>
-                    <p>Novos modelos conectados a apps oferecem controle remoto da intensidade e recursos de personalização.</p>
+                    <p>Novos modelos conectados a apps oferecem controle remoto da intensidade e recursos de
+                        personalização.</p>
                 </div>
                 <div class="produto-card">
                     <h3>Tecnologias Avançadas</h3>
-                    <p>Sistemas de difusão a seco, ultrassom e nanotecnologia para uma dispersão mais eficiente dos aromas.</p>
+                    <p>Sistemas de difusão a seco, ultrassom e nanotecnologia para uma dispersão mais eficiente dos
+                        aromas.</p>
                 </div>
                 <div class="produto-card">
                     <h3>Tendências de Customização</h3>
-                    <p>Consumidores buscam cada vez mais fragrâncias personalizadas e designs que refletem sua individualidade.</p>
+                    <p>Consumidores buscam cada vez mais fragrâncias personalizadas e designs que refletem sua
+                        individualidade.</p>
                 </div>
             </div>
 
             <h3 style="text-align: center; margin-top: 50px;">Onde Comprar Aromatizantes Confiáveis</h3>
             <ul class="onde-comprar-list">
-                <li>**Com Representantes Oficiais:** Compre através de **revendedores autorizados de sua confiança**, garantindo que você está recebendo um produto original e de alta qualidade no mercado.</li>
-                <li>**Lojas Especializadas:** Lojas de acessórios automotivos e departamentos em autopeças são ótimas opções.</li>
-                <li>**Comércio Online:** Sites e marketplaces confiáveis oferecem seleção diversificada e comodidade de compra de casa (Link para sua loja!).</li>
-                <li>**Fabricantes Diretos:** Adquirir diretamente do fabricante **AROMAS BOM CHEIRO** garante a autenticidade do produto e, muitas vezes, melhores preços.</li>
+                <li><b>Com Representantes Oficiais:</b> Compre através de <b>revendedores autorizados de sua
+                        confiança,</b> garantindo que você está recebendo um produto original e de alta qualidade no
+                    mercado.</li>
+                <li><b>Lojas Especializadas:</b> Lojas de acessórios automotivos e departamentos em autopeças são ótimas
+                    opções.</li>
+                <li><b>Comércio Online:</b> Sites e marketplaces confiáveis oferecem seleção diversificada e comodidade
+                    de compra de casa (Link para sua loja!).</li>
+                <li><b>Fabricantes Diretos:</b> Adquirir diretamente do fabricante <b>AROMAS BOM CHEIRO</b> garante a
+                    autenticidade do produto e, muitas vezes, melhores preços.</li>
             </ul>
         </div>
     </section>
@@ -696,24 +841,25 @@
         <div class="container contato-flex">
             <h2>Fale com nosso Representante Comercial</h2>
             <p class="subtitle">
-                Entre em contato conosco através dos canais abaixo. Nossa equipe está pronta para atender revendedores, parceiros e consumidores finais.
+                Entre em contato conosco através dos canais abaixo. Nossa equipe está pronta para atender revendedores,
+                parceiros e consumidores finais.
             </p>
 
             <div class="contato-info-grande">
                 <h3>Informações de Contato Direto</h3>
-                
+
                 <p>
-                    <strong style="color: #c2bbbb;"><i class="fas fa-envelope"></i> E-mail (Preferencial):</strong> 
+                    <strong style="color: #c2bbbb;"><i class="fas fa-envelope"></i> E-mail (Preferencial):</strong>
                     <a href="mailto:aromacar@protonmail.com">aromacar@protonmail.com</a>
                 </p>
-                
+
                 <p>
-                    <strong style="color: #c2bbbb;"><i class="fas fa-phone-alt"></i> Telefone / WhatsApp:</strong> 
-                    <a href="https://wa.me/5598981122395" target="_blank">+55 (98) 9-8541-2311</a>
+                    <strong style="color: #c2bbbb;"><i class="fas fa-phone-alt"></i> Telefone / WhatsApp:</strong>
+                    <a href="https://wa.me/5598981122395" target="_blank">+55 (98) 9-8112-2395</a>
                 </p>
-                
+
                 <p style="color: #bbb;">
-                    <strong><i class="fas fa-clock"></i> Horário de Atendimento:</strong> 
+                    <strong><i class="fas fa-clock"></i> Horário de Atendimento:</strong>
                     Segunda a Sexta, das 8h às 18h.
                 </p>
 
@@ -721,9 +867,12 @@
 
                 <h3>Nos encontre nas Redes Sociais</h3>
                 <div class="redes-sociais">
-                    <a href="https://instagram.com/aromasbomcheiro" target="_blank" style="color: var(--accent-green);"><i class="fab fa-instagram"></i> Instagram</a> 
-                    <a href="https://facebook.com/aromasbomcheiro" target="_blank" style="color: var(--accent-green);"><i class="fab fa-facebook"></i> Facebook</a> 
-                    <a href="https://tiktok.com/@seuperfiltiktok" target="_blank" style="color: var(--accent-green);"><i class="fab fa-tiktok"></i> TikTok</a>
+                    <a href="https://instagram.com/aromasbomcheiro" target="_blank"
+                        style="color: var(--accent-green);"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://facebook.com/aromasbomcheiro" target="_blank"
+                        style="color: var(--accent-green);"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="https://tiktok.com/@seuperfiltiktok" target="_blank" style="color: var(--accent-green);"><i
+                            class="fab fa-tiktok"></i> TikTok</a>
                 </div>
             </div>
 
@@ -732,22 +881,23 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 AROMAS BOM CHEIRO. Todos os direitos reservados. | <a href="#contato" style="color: var(--accent-green); text-decoration: none;">Fale Conosco</a></p>
+            <p>&copy; 2025 AROMAS BOM CHEIRO. Todos os direitos reservados. | <a href="#contato"
+                    style="color: var(--accent-green); text-decoration: none;">Fale Conosco</a></p>
         </div>
     </footer>
-    
+
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             // Seleciona todas as seções que devem ter o efeito fade-in
             const sections = document.querySelectorAll('.fade-in');
-            
+
             // Função para verificar se o elemento está visível na tela
             const checkVisibility = () => {
                 const windowHeight = window.innerHeight;
                 sections.forEach(section => {
                     // Calcula a posição do topo da seção
                     const sectionTop = section.getBoundingClientRect().top;
-                    
+
                     // Se o topo da seção estiver a 150px acima do final da janela (ou mais), torna-o visível
                     // O valor '150' é o "ponto de gatilho"
                     if (sectionTop < windowHeight - 150) {
@@ -759,18 +909,18 @@
             // Adiciona o listener de evento para scroll e também executa uma vez no carregamento
             window.addEventListener('scroll', checkVisibility);
             checkVisibility(); // Executa ao carregar para mostrar as seções já visíveis.
-            
-            
+
+
             /* CÓDIGO PARA O MENU RESPONSIVO */
             const menuToggle = document.getElementById('menu-toggle');
             const mainNav = document.getElementById('main-nav');
             const navLinks = mainNav.querySelectorAll('a');
 
             // 1. Função para abrir/fechar o menu ao clicar no botão
-            menuToggle.addEventListener('click', function() {
+            menuToggle.addEventListener('click', function () {
                 // Alterna a classe 'is-open' no elemento nav
                 mainNav.classList.toggle('is-open');
-                
+
                 // Altera o ícone do botão (Hambúrguer <-> X)
                 const icon = menuToggle.querySelector('i');
                 if (mainNav.classList.contains('is-open')) {
@@ -786,7 +936,7 @@
 
             // 2. Fechar o menu ao clicar em um link (âncora) no mobile
             navLinks.forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function () {
                     // Verifica se o menu está aberto para fechar
                     if (mainNav.classList.contains('is-open')) {
                         mainNav.classList.remove('is-open');
@@ -800,4 +950,5 @@
         }); 
     </script>
 </body>
+
 </html>

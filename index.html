@@ -22,6 +22,23 @@
 
     <link rel="canonical" href="https://aromasbomcheiro.online/">
 
+    <meta property="og:title" content="AROMAS BOM CHEIRO | Essências Premium para Carros">
+
+    <meta property="og:description"
+        content="Mais que um cheiro bom, uma experiência olfativa premium. Conforto, luxo e sustentabilidade para seu veículo.">
+
+    <meta property="og:image" content="https://aromasbomcheiro.online/assets/social-share.png">
+
+    <meta property="og:url" content="https://aromasbomcheiro.online/">
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AROMAS BOM CHEIRO | Essências Premium para Carros">
+    <meta name="twitter:description"
+        content="Mais que um cheiro bom, uma experiência olfativa premium. Conforto, luxo e sustentabilidade para seu veículo.">
+    <meta name="twitter:image" content="https://aromasbomcheiro.online/assets/social-share.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -421,7 +438,8 @@
             padding: 10px 0;
             border-bottom: 1px dashed #ddd;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            /* <<< EDITADO (de 'center' para 'flex-start') */
         }
 
         .onde-comprar-list li:before {
@@ -431,6 +449,10 @@
             color: var(--primary-blue);
             margin-right: 15px;
             font-size: 1.1em;
+            flex-shrink: 0;
+            /* <<< ADICIONADO */
+            margin-top: 4px;
+            /* <<< ADICIONADO (para alinhamento fino) */
         }
 
         /* SEÇÃO CONTATO (Estilo customizado e escuro) */
